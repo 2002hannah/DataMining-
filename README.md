@@ -9,14 +9,15 @@
 ## 系統介面
 
 ### 1. 資料不平衡處理前後比例 (SMOTE)
-<img width="500" alt="SMOTE 比例圖" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" />
+<img width="1339" height="626" alt="截圖 2026-06-23 下午3 41 29" src="https://github.com/user-attachments/assets/9cf213cb-517d-4094-8875-c7b9a00e9b78" />
 
-> **圖說**：原始數據中忠誠客戶（Class 0）佔絕大比例（約 58.7%），經 SMOTE 重採樣後，三類的比例均衡調整為各佔 33.3%。
+> **說明**：原始數據中忠誠客戶（Class 0）佔絕大比例（約 58.7%），經 SMOTE 重採樣後，三類的比例均衡調整為各佔 33.3%。
 
-### 2. 最終採納模型 XGBoost 混淆矩陣 (Confusion Matrix)
-<img width="500" alt="XGBoost Confusion Matrix" src="https://images.unsplash.com/photo-1543286386-7a39e65f0b84?auto=format&fit=crop&w=800&q=80" />
+### 2. XGBoost 預測結果與混淆矩陣
+<img width="1304" height="581" alt="截圖 2026-06-23 下午3 41 40" src="https://github.com/user-attachments/assets/0be398de-dded-4ef4-9b74-2c75fc329a09" />
 
-> **圖說**：最佳機率門檻下（$t_1=0.38, t_2=0.42$）的混淆矩陣預測結果 ，成功大幅提升少數類別的召回率與預測精準度。
+
+> **說明**：混淆矩陣預測結果，成功大幅提升少數類別的召回率與預測精準度。
 
 
 ## 環境
