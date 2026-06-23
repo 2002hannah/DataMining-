@@ -34,19 +34,13 @@ imbalanced-learn
 
 ## 技術
 
-```
-2D 時間序列特徵工程 (2D Time-Series Feature Engineering)
-RFM 客戶價值分析模型 
-SMOTE 不平衡資料過採樣技術
-網格搜尋機率門檻優化 
-雙模型軟投票融合 (XGBoost + LSTM Ensemble)
-```
++ 2D 時間序列特徵工程 (2D Time-Series Feature Engineering)
++ RFM 客戶價值分析模型 
++ SMOTE 不平衡資料過採樣技術
++ 網格搜尋機率門檻優化 
++ 雙模型軟投票融合 (XGBoost + LSTM Ensemble)
 
-## 功能
 
-雙維度時序特徵工程：將 36 個月的縱向時序數據完全攤平，形成高維度 2D 基礎特徵寬表（共 694 欄）
-衍生滾動時序特徵：針對 6 種基礎行為指標，分別計算 3 個月與 6 個月的移動平均版本（共 432 欄），捕捉近期行為衰退趨勢
-濃縮摘要特徵提取：針對時間序列個別抽取 Trend Slope（趨勢斜率）、ROC3（近3期變化率）、Std（波動度）、EMA Last（指數移動平均最後值）、Active Months（活躍月份數）與 Months Since Active（距最後活躍月數）等 6 種長期統計指標（共 36 欄） 
 不平衡數據重採樣 (SMOTE)：自動將訓練集資料依目標標籤進行 1:1:1 的合成採樣平衡，避免模型產生多數類別偏誤
 多模型融合對比分析：實現並對比了單一樹模型與雙模型融合（XGBoost + LSTM）的成效，深入分析並總結了結構化寬表在樹模型上的天然優勢 
 
