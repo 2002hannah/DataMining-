@@ -13,12 +13,12 @@
 ### 1. 資料不平衡處理前後比例 (SMOTE)
 <img width="500" alt="SMOTE 比例圖" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" />
 
-> **圖說**：原始數據中忠誠客戶（Class 0）佔絕大比例（約 58.7%），經 SMOTE 重採樣後，三類的比例均衡調整為各佔 33.3% 。
+> **圖說**：原始數據中忠誠客戶（Class 0）佔絕大比例（約 58.7%），經 SMOTE 重採樣後，三類的比例均衡調整為各佔 33.3%。
 
 ### 2. 最終採納模型 XGBoost 混淆矩陣 (Confusion Matrix)
 <img width="500" alt="XGBoost Confusion Matrix" src="https://images.unsplash.com/photo-1543286386-7a39e65f0b84?auto=format&fit=crop&w=800&q=80" />
 
-> [cite_start]**圖說**：最佳機率門檻下（$t_1=0.38, t_2=0.42$）的混淆矩陣預測結果 [cite: 97][cite_start]，成功大幅提升少數類別的召回率與預測精準度 [cite: 110, 111, 115, 116]。
+> [**圖說**：最佳機率門檻下（$t_1=0.38, t_2=0.42$）的混淆矩陣預測結果 ，成功大幅提升少數類別的召回率與預測精準度。
 
 
 ## 環境
@@ -36,15 +36,21 @@
 
 ## 技術
 
+```
+
 + 2D 時間序列特徵工程 (2D Time-Series Feature Engineering)
 + RFM 客戶價值分析模型 
 + SMOTE 不平衡資料過採樣技術
 + 網格搜尋機率門檻優化 
-+ 雙模型軟投票融合 (XGBoost + LSTM Ensemble) 
++ 雙模型軟投票融合 (XGBoost + LSTM Ensemble)
+
+```
 
 ## 功能
 
-+雙維度時序特徵工程：將 36 個月的縱向時序數據完全攤平，形成高維度 2D 基礎特徵寬表（共 694 欄）
+```
+
++ 雙維度時序特徵工程：將 36 個月的縱向時序數據完全攤平，形成高維度 2D 基礎特徵寬表（共 694 欄）
 + 衍生滾動時序特徵：針對 6 種基礎行為指標，分別計算 3 個月與 6 個月的移動平均版本（共 432 欄），捕捉近期行為衰退趨勢
 + 濃縮摘要特徵提取：針對時間序列個別抽取 Trend Slope（趨勢斜率）、ROC3（近3期變化率）、Std（波動度）、EMA Last（指數移動平均最後值）、Active Months（活躍月份數）與 Months Since Active（距最後活躍月數）等 6 種長期統計指標（共 36 欄） 
 + 不平衡數據重採樣 (SMOTE)：自動將訓練集資料依目標標籤進行 1:1:1 的合成採樣平衡，避免模型產生多數類別偏誤。
