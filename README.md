@@ -24,14 +24,13 @@
 
 ## 環境
 
-```
 Python 3.11
 Jupyter Notebook
 scikit-learn
 xgboost
 tensorflow (keras)
 imbalanced-learn
-```
+
 
 ## 技術
 
